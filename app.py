@@ -8,7 +8,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Load the pre-trained model
-model = load_model('BrainTumor10EpochsCategorical.h5')
+model = load_model('BrainTumor10EpochsCategorical.h5', compile=False)
 print('Model loaded.')
 
 # Function to get the class name based on class number
