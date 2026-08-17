@@ -2,13 +2,13 @@ import os
 import cv2
 import numpy as np
 from flask import Flask, request, render_template
-from keras.models import load_model
+from tensorflow.keras.models import load_model
 from werkzeug.utils import secure_filename
 
 app = Flask(__name__)
 
 # Load the pre-trained model
-model = load_model('BrainTumor10Epochs.h5')
+model = load_model('BrainTumor10EpochsCategorical.h5')
 print('Model loaded.')
 
 # Function to get the class name based on class number
